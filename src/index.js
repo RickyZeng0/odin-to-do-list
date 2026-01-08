@@ -1,5 +1,4 @@
-import hi from "./test.js";
-import "./style.css";
+import { Storage } from "./api";
 
-console.log(hi);
-console.log("Hello World again !");
+//used to test code in the dev tool console
+window.Storage = Storage;
