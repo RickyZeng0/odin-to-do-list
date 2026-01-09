@@ -104,3 +104,40 @@ body {
 .item-date{
     font-size: 18px;
 }
+
+.project-dialog .title {
+    padding: 10px 20px;
+    background-color: rgb(47, 46, 46);
+    color: white;
+    font-size: 30px;
+}
+
+.project-dialog {
+    width: 400px;
+    padding: 0px;
+}
+
+.project-dialog form {
+    padding: 20px;
+}
+
+.project-title {
+    display: flex;
+    gap: 10px;
+}
+
+.project-dialog input{
+    flex-grow: 1;
+}
+
+.project-dialog .buttons{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.project-dialog button{
+    padding: 10px 20px;
+    flex-grow: 1;
+}

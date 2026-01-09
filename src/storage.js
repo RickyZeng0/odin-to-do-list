@@ -26,6 +26,18 @@ export class Storage {
         return JSON.parse(projectString);
     }
 
+    static getAllProjectID(){
+        let array = [];
+        for(let key in localStorage){
+            if(key.length == 36) {
+                let title = this.getProject(key).title;
+                array.push({ id:key,title});
+            }
+        }
+        array.sort( (a,b) => a.title.localeCompare(b.title) );
+        return array;
+    }
+
     static getProjectAndItem(projectID, itemID){
         let project = this.getProject(projectID);
         if(project === undefined) return;
@@ -42,6 +54,7 @@ export class Storage {
     static addNewProject(title){
         let project = new Project(title);
         this.setProject(project);
+        return project.id;
     }
 
     static addNewItemToProject(projectID,title,description,dueDate,priority){
