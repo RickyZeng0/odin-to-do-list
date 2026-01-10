@@ -87,11 +87,11 @@ body {
     background-color: rgb(240, 243, 247);   
 }
 
-.item {
+.item , .add-item{
     gap: 30px;
 }
 
-.item .icon{
+.item .icon  , input[type=checkbox]{
     width: 20px;
     height: 20px;
 }
