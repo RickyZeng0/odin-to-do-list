@@ -102,4 +102,12 @@ export class Storage {
         localStorage.removeItem(projectID);
     }
 
+    static setDefaultProjectAndItem(){
+        let defaultSetted = localStorage.getItem("default");
+        if(defaultSetted !==  null) return;
+        let projectID = this.addNewProject("Programming");
+        this.addNewItemToProject(projectID,"C++","OOP C++","2026-01-10","Middle");
+        localStorage.setItem("default","the default project and item is setted when the page is first loaded");
+    }
+
 }

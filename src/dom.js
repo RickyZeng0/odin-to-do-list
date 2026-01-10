@@ -69,5 +69,6 @@ export function initDom(){
     projectForm.addEventListener("submit", createAndShowProject);
     cancelProjectBtn.addEventListener("click", cancelProject);
 
+    Storage.setDefaultProjectAndItem();
     reRenderAllProject();
 }
